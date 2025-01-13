@@ -4,6 +4,8 @@
       "image": "https://jfurnace.netlify.app/assets/mods/timescale.png",
       "scriptUrl": "https://jfurnace.netlify.app/assets/mods/timescale.js",
       "description": "/timescale 0.5 to halve the speed of time",
+      "api": "EaglerForge Injector",
+      "category": "Util",
       "author": "ZXMushroom63"
     },
     {
