@@ -1,8 +1,24 @@
 [
     {
-      "name": "Test",
-      "image": "https://jfurnace.netlify.app/assets/mods/test.jpg",
-      "scriptUrl": "https://jfurnace.netlify.app/assets/mods/test.js"
+      "name": "Timescale",
+      "image": "https://jfurnace.netlify.app/assets/mods/timescale.png",
+      "scriptUrl": "https://jfurnace.netlify.app/assets/mods/timescale.js",
+      "description": "/timescale 0.5 to halve the speed of time",
+      "author": "ZXMushroom63"
+    },
+    {
+      "name": "Easy block registerer",
+      "image": "https://jfurnace.netlify.app/assets/mods/ebr.png",
+      "scriptUrl": "https://jfurnace.netlify.app/assets/mods/ebr.js",
+      "description": "Add your custom blocks to the game easily",
+      "author": ""
+    },
+    {
+      "name": "Advanced Block Of Steve",
+      "image": "https://jfurnace.netlify.app/assets/mods/abos.png",
+      "scriptUrl": "https://jfurnace.netlify.app/assets/mods/abos.js",
+      "description": "An advanced version of the Block of Steve mod.",
+      "author": "ZXMushroom63"
     }
   ]
   
