@@ -1,7 +1,8 @@
-[
+{
+  "mods": [
     {
       "name": "Timescale",
-      "image": "https://jfurnace.netlify.app/assets/mods/timescale.png",
+      "image": "https://jfurnace.netlify.app/assets/icons/dm.png",
       "scriptUrl": "https://jfurnace.netlify.app/assets/mods/timescale.js",
       "description": "/timescale 0.5 to halve the speed of time",
       "api": "EaglerForge Injector",
@@ -10,17 +11,119 @@
     },
     {
       "name": "Easy block registerer",
-      "image": "https://jfurnace.netlify.app/assets/mods/ebr.png",
+      "image": "https://jfurnace.netlify.app/assets/icons/dm.png",
       "scriptUrl": "https://jfurnace.netlify.app/assets/mods/ebr.js",
       "description": "Add your custom blocks to the game easily",
-      "author": ""
+      "api": "EaglerForge Injector",
+      "category": "Library",
+      "author": "Oeil-de-Lynx",
+      "htu": "https://jfurnace.netlify.app/assets/mods/ebr/htu.text"
     },
     {
       "name": "Advanced Block Of Steve",
-      "image": "https://jfurnace.netlify.app/assets/mods/abos.png",
+      "image": "https://jfurnace.netlify.app/assets/icons/dm.png",
       "scriptUrl": "https://jfurnace.netlify.app/assets/mods/abos.js",
-      "description": "An advanced version of the Block of Steve mod.",
-      "author": "ZXMushroom63"
+      "description": "An advanced version of the Block of Steve mod. Requires AsyncSink.",
+      "category": "Mod",
+      "api": "EaglerForge Injector",
+      "author": "ZXMushroom63",
+      "htu": "https://jfurnace.netlify.app/assets/mods/abos/htu.text"
+    },
+    {
+      "name": "AsyncSink",
+      "description": "Library for patching and hooking into asynchronous filesystem requests for EaglercraftX.",
+      "author": "By ZXMushroom63",
+      "scriptUrl": "C:/Users/jayde/Downloads/Furnace/assets/mods/AsyncSink/AsyncSink.js"
+    },
+    {
+      "name": "Simple Block Of Steve",
+      "description": "An simple version of the Block of Steve mod. Requires AsyncSink.",
+      "author": "ZXMushroom63",
+      "scriptUrl": "C:/Users/jayde/Downloads/Output/block_of_steve_simple/block_of_steve_simple.js"
+    },
+    {
+      "name": "CustomItemsDemo",
+      "description": "",
+      "author": "",
+      "scriptUrl": "C:/Users/jayde/Downloads/Output/CustomItemsDemo/CustomItemsDemo.js"
+    },
+    {
+      "name": "DiamondCraftingRecipeMod",
+      "description": "Adds a crafting recipe to create diamond blocks from dirt.",
+      "author": "",
+      "scriptUrl": "C:/Users/jayde/Downloads/Output/DiamondCraftingRecipeMod/DiamondCraftingRecipeMod.js"
+    },
+    {
+      "name": "Dupe Hunting",
+      "description": "⚠️Only works over WS, not local. May induce bans.⚠️",
+      "author": "by ZXMushroom63",
+      "scriptUrl": "C:/Users/jayde/Downloads/Output/Dupe Hunting/Dupe Hunting.js"
+    },
+    {
+      "name": "grapplehook",
+      "description": "",
+      "author": "",
+      "scriptUrl": "C:/Users/jayde/Downloads/Output/grapplehook/grapplehook.js"
+    },
+    {
+      "name": "guns",
+      "description": "Requires AsyncSink.",
+      "author": "",
+      "scriptUrl": "C:/Users/jayde/Downloads/Output/guns/guns.js"
+    },
+    {
+      "name": "guns_craftable",
+      "description": "Requires AsyncSink.",
+      "author": "",
+      "scriptUrl": "C:/Users/jayde/Downloads/Output/guns_craftable/guns_craftable.js"
+    },
+    {
+      "name": "SimpleHats",
+      "description": "Use /hat to wear whatever you are holding",
+      "author": "Made with ❤️ by ZXMushroom63",
+      "scriptUrl": "C:/Users/jayde/Downloads/Output/SimpleHats/SimpleHats.js"
+    },
+    {
+      "name": "LibCustomItems",
+      "description": "Library to make adding basic custom items easier.",
+      "author": "By ZXMushroom63",
+      "scriptUrl": "C:/Users/jayde/Downloads/Output/LibCustomItems/LibCustomItems.js"
+    },
+    {
+      "name": "MobLife viewer",
+      "description": "Mod to see the mobs life in real time.",
+      "author": "By Oeildelynx",
+      "scriptUrl": "C:/Users/jayde/Downloads/Output/MobLife viewer/MobLife viewer.js"
+    },
+    {
+      "name": "Unlucky Blocks",
+      "description": "These purple cubes ruined my life. Requires AsyncSink.",
+      "author": "By ZXMushroom63",
+      "scriptUrl": "C:/Users/jayde/Downloads/Output/Unlucky Blocks/Unlucky Blocks.js"
+    },
+    {
+      "name": "Simple VClip Exploit",
+      "description": "Use .vclip <offset> to vertically phase through blocks.",
+      "author": "By ZXMushroom63",
+      "scriptUrl": "C:/Users/jayde/Downloads/Output/Simple VClip Exploit/Simple VClip Exploit.js"
+    },
+    {
+      "name": "Waypoints Mod",
+      "description": "Use /setwp <name> to make a waypoint, and /wp <name> to go to it. /remwp <name> to delete a waypoint. /listwp to list all waypoints.",
+      "author": "By blizz828, Block_2222 & ZXMushroom63",
+      "scriptUrl": "C:/Users/jayde/Downloads/Output/Waypoints Mod/Waypoints Mod.js"
+    },
+    {
+      "name": "WorldEdit",
+      "description": "Use //wand, //set and //walls in singleplayer worlds.",
+      "author": "By radmanplays",
+      "scriptUrl": "C:/Users/jayde/Downloads/Output/WorldEdit/WorldEdit.js"
+    },
+    {
+      "name": "xpspawner",
+      "description": "",
+      "author": "",
+      "scriptUrl": "C:/Users/jayde/Downloads/Output/xpspawner/xpspawner.js"
     }
   ]
-  
+}
