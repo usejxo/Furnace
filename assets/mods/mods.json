@@ -15,7 +15,7 @@
       "scriptUrl": "https://jfurnace.netlify.app/assets/mods/ebr/ebr.js",
       "description": "Add your custom blocks to the game easily",
       "category": "Library",
-      "author": "Oeil-de-Lynx",
+      "author": "Oeildelynx",
       "htu": "https://jfurnace.netlify.app/assets/mods/ebr/htu.text"
     },
     {
@@ -108,7 +108,7 @@
       "image": "https://jfurnace.netlify.app/assets/mods/lci/lci.png",
       "description": "Library to make adding basic custom items easier.",
       "category":"Library",
-      "author": "By ZXMushroom63",
+      "author": "ZXMushroom63",
       "scriptUrl": "https://jfurnace.netlify.app/assets/mods/lci/lci.js"
     },
     {
@@ -116,7 +116,7 @@
       "image": "https://jfurnace.netlify.app/assets/mods/mlv/mlv.png",
       "description": "Mod to see the mobs life in real time.",
       "category":"Util",
-      "author": "By Oeildelynx",
+      "author": "Oeildelynx",
       "scriptUrl": "https://jfurnace.netlify.app/assets/mods/mlv/mlv.js"
     },
     {
@@ -124,7 +124,7 @@
       "image": "https://jfurnace.netlify.app/assets/mods/ub/ub.png",
       "description": "These purple cubes ruined my life. Requires AsyncSink.",
       "category":"Fun",
-      "author": "By ZXMushroom63",
+      "author": "ZXMushroom63",
       "scriptUrl": "https://jfurnace.netlify.app/assets/mods/ub/ub.js"
     },
     {
@@ -146,9 +146,9 @@
     {
       "name": "WorldEdit",
       "image": "https://jfurnace.netlify.app/assets/mods/we/we.png",
-      "description": "Use //wand, //set and //walls in singleplayer worlds.",
+      "description": "Use //wand, //set and //walls in singleplayer worlds. Requires Custom Item Lib",
       "category":"Usefull",
-      "author": "By radmanplays",
+      "author": "Radmanplays",
       "scriptUrl": "https://jfurnace.netlify.app/assets/mods/we/we.js"
     },
     {
