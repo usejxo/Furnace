@@ -81,7 +81,7 @@
     },
     {
       "name": "Guns",
-      "image": "https://jfurnace.netlify.app/assets/guns/guns.png",
+      "image": "https://jfurnace.netlify.app/assets/mods/guns/guns.png",
       "description": "Requires AsyncSink.",
       "category": "Weapon",
       "author": "ZXMushroom63",
@@ -89,7 +89,7 @@
     },
     {
       "name": "Guns craftable",
-      "image": "https://jfurnace.netlify.app/assets/gunsc/gunsc.png",
+      "image": "https://jfurnace.netlify.app/assets/mods/gunsc/gunsc.png",
       "description": "Makes guns craftable. Requires AsyncSink. The origanal guns is not needed.",
       "category": "Weapon",
       "author": "ZXMushroom63",
