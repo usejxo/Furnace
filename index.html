@@ -6,223 +6,107 @@
     <title>JFurnace Mods</title>
     <style>
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #121212;
-            color: #e0e0e0;
+            font-family: Arial, sans-serif;
+            background-color: #1e1e1e;
+            color: white;
             margin: 0;
             padding: 0;
         }
         .navbar {
-            background-color: #1f1f1f;
+            background-color: #333;
             padding: 15px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
         }
         .navbar a {
-            color: #ff6a00;
+            color: orange;
             text-decoration: none;
             margin: 0 15px;
             font-size: 18px;
-            font-weight: 500;
-        }
-        .navbar a:hover {
-            color: #fff;
-        }
-        .navbar span {
-            font-size: 22px;
-            font-weight: bold;
-            color: #fff;
         }
         .container {
-            padding: 30px;
-        }
-        .tabs {
-            display: flex;
-            border-bottom: 2px solid #444;
-            margin-bottom: 20px;
-        }
-        .tab {
-            padding: 10px 20px;
-            cursor: pointer;
-            font-size: 18px;
-            transition: all 0.3s;
-        }
-        .tab:hover {
-            background-color: #333;
-        }
-        .tab.active {
-            border-bottom: 2px solid #ff6a00;
-            color: #ff6a00;
+            padding: 20px;
         }
         .mod-container {
             background: #333;
-            padding: 20px;
-            border-radius: 8px;
-            margin: 15px 0;
-            transition: transform 0.3s ease;
-        }
-        .mod-container:hover {
-            transform: scale(1.05);
-        }
-        .mod-container h3 {
-            margin: 0;
-            font-size: 20px;
-            color: #ff6a00;
-        }
-        .mod-container p {
-            font-size: 16px;
-            color: #ccc;
+            padding: 15px;
+            border: 1px solid orange;
+            border-radius: 5px;
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
         }
         .mod-container img {
-            max-width: 100%;
-            height: 200px;
+            width: 100px;
+            height: 100px;
             object-fit: cover;
-            border-radius: 8px;
+            border-radius: 5px;
+            margin-right: 15px;
+        }
+        .mod-info {
+            flex: 1;
         }
         .download-btn {
-            background-color: #ff6a00;
+            background-color: orange;
             color: black;
-            padding: 12px 20px;
+            padding: 10px;
             border: none;
             cursor: pointer;
             font-size: 16px;
             margin-top: 10px;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-        }
-        .download-btn:hover {
-            background-color: #e85f00;
         }
         .error-message {
             color: red;
             font-weight: bold;
-            font-size: 18px;
-        }
-        .content {
-            display: none;
-        }
-        .content.active {
-            display: block;
         }
         .search-bar {
-            padding: 10px;
             width: 100%;
-            font-size: 16px;
-            margin-bottom: 20px;
-            border-radius: 5px;
-            border: 1px solid #444;
-            background-color: #222;
-            color: #fff;
-        }
-        .category-select {
-            background-color: #444;
-            color: #fff;
             padding: 10px;
             font-size: 16px;
-            border: none;
-            cursor: pointer;
-            border-radius: 5px;
-            width: 100%;
+            margin-bottom: 10px;
         }
-        .category-select option {
-            background-color: #222;
+        .filter-container {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+        .category-dropdown {
+            padding: 10px;
+            font-size: 16px;
         }
     </style>
 </head>
 <body>
-
     <div class="navbar">
-        <span>Furnace</span>
-        <div>
-            <a href="javascript:void(0)" onclick="showTab('mods')">Mods</a>
-            <a href="javascript:void(0)" onclick="showTab('downloads')">Downloads</a>
+        <span style="color: white; font-size: 20px; font-weight: bold;">Furnace</span>
+        <a href="#mods">Mods</a>
+        <a href="#downloads">Downloads</a>
+    </div>
+
+    <!-- Mods Section -->
+    <div class="container" id="mods">
+        <h2>Available Mods</h2>
+        <div class="filter-container">
+            <input type="text" class="search-bar" id="search-bar" placeholder="Search mods...">
+            <select class="category-dropdown" id="category-dropdown">
+                <option value="all">All Categories</option>
+            </select>
+        </div>
+        <div id="mod-list">
+            <p>Loading mods...</p>
         </div>
     </div>
 
-    <div class="container">
-        <div id="mods" class="content active">
-            <h2>Available Mods</h2>
-
-            <!-- Search Bar -->
-            <input type="text" id="search-bar" class="search-bar" placeholder="Search mods..." oninput="filterMods()">
-            
-            <!-- Category Dropdown -->
-            <select id="category-select" class="category-select" onchange="filterCategory()">
-
-            </select>
-
-            <div id="mod-list">
-                <p>Loading mods...</p>
-            </div>
-        </div>
-        <div id="downloads" class="content">
-            <h2>Download Furnace</h2>
-            <button class="download-btn" onclick="fetchAndDownload('https://jfurnace.netlify.app/downloads/windows.zip', 'Furnace_Windows')">Download for Windows</button>
-            <button class="download-btn" onclick="fetchAndDownload('https://jfurnace.netlify.app/downloads/chromeos.zip', 'Furnace_ChromeOS')">Download for ChromeOS</button>
-        </div>
+    <!-- Downloads Section -->
+    <div class="container" id="downloads">
+        <h2>Download Furnace</h2>
+        <button class="download-btn" onclick="fetchAndDownload('https://jfurnace.netlify.app/downloads/windows.zip', 'Furnace_Windows', true)">Download for Windows</button>
+        <button class="download-btn" onclick="fetchAndDownload('https://jfurnace.netlify.app/downloads/chromeos.zip', 'Furnace_ChromeOS', true)">Download for ChromeOS</button>
     </div>
 
     <script>
-        let modsData = [];
-        let currentCategory = 'All';
-
-        function showTab(tabName) {
-            const tabs = document.querySelectorAll('.content');
-            tabs.forEach(tab => {
-                tab.classList.remove('active');
-            });
-            document.getElementById(tabName).classList.add('active');
-
-            const navLinks = document.querySelectorAll('.navbar a');
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-            });
-            const activeLink = Array.from(navLinks).find(link => link.textContent.toLowerCase() === tabName);
-            if (activeLink) {
-                activeLink.classList.add('active');
-            }
-        }
-
-        function filterMods() {
-            const searchQuery = document.getElementById('search-bar').value.toLowerCase();
-            const modList = document.getElementById('mod-list');
-            modList.innerHTML = ''; // Clear the list
-
-            const filteredMods = modsData.filter(mod => {
-                return (
-                    mod.name.toLowerCase().includes(searchQuery) ||
-                    (mod.description && mod.description.toLowerCase().includes(searchQuery))
-                );
-            });
-
-            filteredMods.forEach(mod => {
-                if (currentCategory === 'All' || mod.category === currentCategory) {
-                    const modDiv = document.createElement('div');
-                    modDiv.className = 'mod-container';
-                    modDiv.innerHTML = `
-                        <h3>${mod.name || 'Unknown Mod'}</h3>
-                        <img src="${mod.image || ''}" alt="${mod.name || 'Mod Image'}">
-                        <p><strong>Description:</strong> ${mod.description || 'No description available.'}</p>
-                        <p><strong>Author:</strong> ${mod.author || 'Unknown Author'}</p>
-                        <button class="download-btn" onclick="fetchAndDownload('${mod.scriptUrl}', '${mod.name}')">Download ${mod.name || 'Mod'}</button>
-                    `;
-                    modList.appendChild(modDiv);
-                }
-            });
-
-            if (filteredMods.length === 0) {
-                modList.innerHTML = '<p>No mods found.</p>';
-            }
-        }
-
-        function filterCategory() {
-            currentCategory = document.getElementById('category-select').value;
-            filterMods();
-        }
-
-        // Fetch mod data and display
+        // Fetch mods from JSON and populate the page
         fetch('https://jfurnace.netlify.app/assets/mods/mods.json')
             .then(response => {
                 if (!response.ok) {
@@ -235,53 +119,77 @@
                     throw new Error("Invalid JSON format: 'mods' array missing");
                 }
 
-                modsData = data.mods; // Store the mods data
+                const modList = document.getElementById('mod-list');
+                const categoryDropdown = document.getElementById('category-dropdown');
+                modList.innerHTML = '';
 
-                // Populate categories dynamically
-                const categorySelect = document.getElementById('category-select');
-                const categories = ['All', ...new Set(data.mods.map(mod => mod.category))];
+                // Collect categories dynamically
+                const categories = new Set();
+                categories.add("All");
 
-                categories.forEach(category => {
-                    const option = document.createElement('option');
-                    option.value = category;
-                    option.textContent = category;
-                    categorySelect.appendChild(option);
+                data.mods.forEach(mod => {
+                    if (!mod.scriptUrl) return;
+                    categories.add(mod.category || "Uncategorized");
+
+                    const modDiv = document.createElement('div');
+                    modDiv.className = 'mod-container';
+                    modDiv.setAttribute('data-category', mod.category || "Uncategorized");
+                    modDiv.setAttribute('data-name', mod.name.toLowerCase());
+
+                    modDiv.innerHTML = `
+                        <img src="${mod.image || 'https://via.placeholder.com/100'}" alt="${mod.name}">
+                        <div class="mod-info">
+                            <h3>${mod.name || 'Unknown Mod'}</h3>
+                            <p><strong>Author:</strong> ${mod.author || 'Unknown'}</p>
+                            <p><strong>Category:</strong> ${mod.category || 'Uncategorized'}</p>
+                            <p>${mod.description || 'No description available.'}</p>
+                            <button class="download-btn" onclick="fetchAndDownload('${mod.scriptUrl}', '${mod.name}')">Download</button>
+                        </div>
+                    `;
+                    modList.appendChild(modDiv);
                 });
 
-                filterMods(); // Display all mods initially
+                // Populate category dropdown
+                categories.forEach(category => {
+                    const option = document.createElement('option');
+                    option.value = category.toLowerCase();
+                    option.textContent = category;
+                    categoryDropdown.appendChild(option);
+                });
+
+                // Add search and filter functionality
+                document.getElementById('search-bar').addEventListener('input', filterMods);
+                categoryDropdown.addEventListener('change', filterMods);
+
+                function filterMods() {
+                    const searchQuery = document.getElementById('search-bar').value.toLowerCase();
+                    const selectedCategory = categoryDropdown.value;
+                    document.querySelectorAll('.mod-container').forEach(mod => {
+                        const modName = mod.getAttribute('data-name');
+                        const modCategory = mod.getAttribute('data-category').toLowerCase();
+                        const matchesSearch = modName.includes(searchQuery);
+                        const matchesCategory = selectedCategory === 'all' || modCategory === selectedCategory;
+                        mod.style.display = matchesSearch && matchesCategory ? 'flex' : 'none';
+                    });
+                }
             })
             .catch(error => {
                 console.error('Error loading mods:', error);
                 document.getElementById('mod-list').innerHTML = `<p class='error-message'>Failed to load mods: ${error.message}</p>`;
             });
 
-        // Handle the download
-        function fetchAndDownload(url, filename) {
+        // Function to download files
+        function fetchAndDownload(url, filename, isZip = false) {
             if (!url) {
                 alert('Download not available for this item.');
                 return;
             }
-            fetch(url)
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error(`Download failed! Status: ${response.status}`);
-                    }
-                    return response.blob();
-                })
-                .then(blob => {
-                    const a = document.createElement('a');
-                    const objectURL = URL.createObjectURL(blob);
-                    a.href = objectURL;
-                    a.download = filename ? `${filename}.js` : 'download.js';
-                    document.body.appendChild(a);
-                    a.click();
-                    document.body.removeChild(a);
-                    URL.revokeObjectURL(objectURL);
-                })
-                .catch(error => {
-                    console.error('Download error:', error);
-                    alert(`Failed to download the file: ${error.message}`);
-                });
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = isZip ? `${filename}.zip` : filename;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
         }
     </script>
 </body>
