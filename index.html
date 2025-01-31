@@ -3,17 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JFurnace Mods</title>
+    <title>Furnace</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             background-color: #1e1e1e;
             color: white;
             margin: 0;
-            padding: 0;
         }
         .navbar {
-            background-color: #333;
+            background-color: #222;
             padding: 15px;
             display: flex;
             justify-content: space-between;
@@ -22,98 +21,135 @@
         .navbar a {
             color: orange;
             text-decoration: none;
-            margin: 0 15px;
             font-size: 18px;
+            padding: 10px 15px;
+            border-radius: 8px;
+            transition: background 0.3s;
+        }
+        .navbar a:hover {
+            background-color: orange;
+            color: black;
         }
         .container {
             padding: 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+        .hidden {
+            display: none;
         }
         .mod-container {
             background: #333;
             padding: 15px;
             border: 1px solid orange;
-            border-radius: 5px;
-            margin: 10px 0;
+            border-radius: 12px;
+            margin: 15px 0;
             display: flex;
             align-items: center;
+            gap: 15px;
         }
         .mod-container img {
             width: 100px;
             height: 100px;
             object-fit: cover;
-            border-radius: 5px;
-            margin-right: 15px;
+            border-radius: 10px;
         }
-        .mod-info {
+        .mod-container div {
             flex: 1;
         }
         .download-btn {
             background-color: orange;
             color: black;
-            padding: 10px;
+            padding: 10px 15px;
             border: none;
             cursor: pointer;
             font-size: 16px;
-            margin-top: 10px;
+            border-radius: 12px;
+            transition: background 0.3s;
         }
-        .error-message {
-            color: red;
-            font-weight: bold;
+        .download-btn:hover {
+            background-color: #ff9800;
         }
-        .search-bar {
+        .search-bar, .category-dropdown {
             width: 100%;
-            padding: 10px;
+            padding: 12px;
             font-size: 16px;
-            margin-bottom: 10px;
-        }
-        .filter-container {
-            display: flex;
-            justify-content: space-between;
             margin-bottom: 15px;
+            border-radius: 12px;
+            border: 1px solid orange;
+            background-color: #222;
+            color: white;
         }
-        .category-dropdown {
-            padding: 10px;
-            font-size: 16px;
+        h2 {
+            text-align: center;
+            color: orange;
         }
     </style>
 </head>
 <body>
     <div class="navbar">
-        <span style="color: white; font-size: 20px; font-weight: bold;">Furnace</span>
-        <a href="#mods">Mods</a>
-        <a href="#downloads">Downloads</a>
+        <span style="color: white; font-size: 22px; font-weight: bold;">Furnace</span>
+        <div>
+            <a href="?page=mods" onclick="navigate(event, 'mods')">Mods</a>
+            <a href="?page=downloads" onclick="navigate(event, 'downloads')">Downloads</a>
+        </div>
     </div>
 
-    <!-- Mods Section -->
-    <div class="container" id="mods">
+    <!-- Mods Page -->
+    <div id="mods" class="container hidden">
         <h2>Available Mods</h2>
-        <div class="filter-container">
-            <input type="text" class="search-bar" id="search-bar" placeholder="Search mods...">
-            <select class="category-dropdown" id="category-dropdown">
-                <option value="all">All Categories</option>
-            </select>
-        </div>
+        <input type="text" class="search-bar" id="search-bar" placeholder="Search mods...">
+        <select class="category-dropdown" id="category-dropdown">
+            <option value="all">All Categories</option>
+        </select>
         <div id="mod-list">
             <p>Loading mods...</p>
         </div>
     </div>
 
-    <!-- Downloads Section -->
-    <div class="container" id="downloads">
+    <!-- Downloads Page -->
+    <div id="downloads" class="container hidden">
         <h2>Download Furnace</h2>
-        <button class="download-btn" onclick="fetchAndDownload('https://jfurnace.netlify.app/downloads/windows.zip', 'Furnace_Windows', true)">Download for Windows</button>
-        <button class="download-btn" onclick="fetchAndDownload('https://jfurnace.netlify.app/downloads/chromeos.zip', 'Furnace_ChromeOS', true)">Download for ChromeOS</button>
+        <div class="mod-container">
+            <div>
+                <h3>Windows Version</h3>
+                <p>Download Furnace for Windows.</p>
+            </div>
+            <button class="download-btn" onclick="fetchAndDownload('https://jfurnace.netlify.app/downloads/windows.zip', 'Furnace_Windows')">Download</button>
+        </div>
+        <div class="mod-container">
+            <div>
+                <h3>ChromeOS Version</h3>
+                <p>Download Furnace for ChromeOS.</p>
+            </div>
+            <button class="download-btn" onclick="fetchAndDownload('https://jfurnace.netlify.app/downloads/chromeos.zip', 'Furnace_ChromeOS')">Download</button>
+        </div>
     </div>
 
     <script>
-        // Fetch mods from JSON and populate the page
+        // Handle page navigation
+        function navigate(event, pageId) {
+            event.preventDefault();
+            history.pushState(null, "", "?page=" + pageId);
+            showPage(pageId);
+        }
+
+        function showPage(pageId) {
+            document.getElementById('mods').classList.add('hidden');
+            document.getElementById('downloads').classList.add('hidden');
+            document.getElementById(pageId).classList.remove('hidden');
+        }
+
+        // Detect page on load
+        window.onload = function () {
+            const params = new URLSearchParams(window.location.search);
+            const page = params.get("page") || "mods";
+            showPage(page);
+        };
+
+        // Fetch and display mods
         fetch('https://jfurnace.netlify.app/assets/mods/mods.json')
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error(`HTTP error! Status: ${response.status}`);
-                }
-                return response.json();
-            })
+            .then(response => response.json())
             .then(data => {
                 if (!data || !Array.isArray(data.mods)) {
                     throw new Error("Invalid JSON format: 'mods' array missing");
@@ -124,8 +160,7 @@
                 modList.innerHTML = '';
 
                 // Collect categories dynamically
-                const categories = new Set();
-                categories.add("All");
+                const categories = new Set(["All"]);
 
                 data.mods.forEach(mod => {
                     if (!mod.scriptUrl) return;
@@ -138,13 +173,13 @@
 
                     modDiv.innerHTML = `
                         <img src="${mod.image || 'https://via.placeholder.com/100'}" alt="${mod.name}">
-                        <div class="mod-info">
+                        <div>
                             <h3>${mod.name || 'Unknown Mod'}</h3>
                             <p><strong>Author:</strong> ${mod.author || 'Unknown'}</p>
                             <p><strong>Category:</strong> ${mod.category || 'Uncategorized'}</p>
                             <p>${mod.description || 'No description available.'}</p>
-                            <button class="download-btn" onclick="fetchAndDownload('${mod.scriptUrl}', '${mod.name}')">Download</button>
                         </div>
+                        <button class="download-btn" onclick="fetchAndDownload('${mod.scriptUrl}', '${mod.name}')">Download</button>
                     `;
                     modList.appendChild(modDiv);
                 });
@@ -157,7 +192,7 @@
                     categoryDropdown.appendChild(option);
                 });
 
-                // Add search and filter functionality
+                // Search and filter functionality
                 document.getElementById('search-bar').addEventListener('input', filterMods);
                 categoryDropdown.addEventListener('change', filterMods);
 
@@ -174,19 +209,13 @@
                 }
             })
             .catch(error => {
-                console.error('Error loading mods:', error);
                 document.getElementById('mod-list').innerHTML = `<p class='error-message'>Failed to load mods: ${error.message}</p>`;
             });
 
-        // Function to download files
-        function fetchAndDownload(url, filename, isZip = false) {
-            if (!url) {
-                alert('Download not available for this item.');
-                return;
-            }
+        function fetchAndDownload(url, filename) {
             const a = document.createElement('a');
             a.href = url;
-            a.download = isZip ? `${filename}.zip` : filename;
+            a.download = filename;
             document.body.appendChild(a);
             a.click();
             document.body.removeChild(a);
