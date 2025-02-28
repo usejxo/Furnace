@@ -2,161 +2,161 @@
   "mods": [
     {
       "name": "Timescale",
-      "image": "https://jfurnace.netlify.app/assets/icons/dm.png",
-      "scriptUrl": "https://jfurnace.netlify.app/assets/mods/timescale/timescale.js",
+      "image": "https://usejxo.github.io/Furnace/assets/icons/dm.png",
+      "scriptUrl": "https://usejxo.github.io/Furnace/assets/mods/timescale/timescale.js",
       "description": "/timescale 0.5 to halve the speed of time",
       "category": "Util",
       "author": "ZXMushroom63"
     },
     {
       "name": "Easy block registerer",
-      "image": "https://jfurnace.netlify.app/assets/icons/dm.png",
-      "scriptUrl": "https://jfurnace.netlify.app/assets/mods/ebr/ebr.js",
+      "image": "https://usejxo.github.io/Furnace/assets/icons/dm.png",
+      "scriptUrl": "https://usejxo.github.io/Furnace/assets/mods/ebr/ebr.js",
       "description": "Add your custom blocks to the game easily",
       "category": "Library",
       "author": "Oeildelynx",
-      "htu": "https://jfurnace.netlify.app/assets/mods/ebr/htu.text"
+      "htu": "https://usejxo.github.io/Furnace/assets/mods/ebr/htu.text"
     },
     {
       "name": "Advanced Block Of Steve",
-      "image": "https://jfurnace.netlify.app/assets/icons/dm.png",
-      "scriptUrl": "https://jfurnace.netlify.app/assets/mods/abos/abos.js",
+      "image": "https://usejxo.github.io/Furnace/assets/icons/dm.png",
+      "scriptUrl": "https://usejxo.github.io/Furnace/assets/mods/abos/abos.js",
       "description": "An advanced version of the Block of Steve mod. Requires AsyncSink.",
       "category": "Mod",
       "author": "ZXMushroom63",
-      "htu": "https://jfurnace.netlify.app/assets/mods/abos/htu.text"
+      "htu": "https://usejxo.github.io/Furnace/assets/mods/abos/htu.text"
     },
     {
       "name": "AsyncSink",
-      "image": "https://jfurnace.netlify.app/assets/mods/as/as.png",
+      "image": "https://usejxo.github.io/Furnace/assets/mods/as/as.png",
       "description": "Library for patching and hooking into asynchronous filesystem requests for EaglercraftX.",
       "category": "Library",
       "author": "ZXMushroom63",
-      "scriptUrl": "https://jfurnace.netlify.app/assets/mods/as/as.js"
+      "scriptUrl": "https://usejxo.github.io/Furnace/assets/mods/as/as.js"
     },
     {
       "name": "Simple Block Of Steve",
-      "image": "https://jfurnace.netlify.app/assets/icons/dm.png",
+      "image": "https://usejxo.github.io/Furnace/assets/icons/dm.png",
       "description": "An simple version of the Block of Steve mod. Requires AsyncSink.",
       "category": "Mod",
       "author": "ZXMushroom63",
-      "scriptUrl": "https://jfurnace.netlify.app/assets/mods/sbos/sbos.js",
-      "htu": "https://jfurnace.netlify.app/assets/mods/sbos/htu.text"
+      "scriptUrl": "https://usejxo.github.io/Furnace/assets/mods/sbos/sbos.js",
+      "htu": "https://usejxo.github.io/Furnace/assets/mods/sbos/htu.text"
     },
     {
       "name": "Custom Items Demo",
-      "image": "https://jfurnace.netlify.app/assets/icons/dm.png",
+      "image": "https://usejxo.github.io/Furnace/assets/icons/dm.png",
       "description": "A demonstration mod for custom items.",
       "category": "Demo",
       "author": "ZXMushroom63",
-      "scriptUrl": "https://jfurnace.netlify.app/assets/mods/cid/cid.js",
-      "htu": "https://jfurnace.netlify.app/assets/mods/cid/htu.text"
+      "scriptUrl": "https://usejxo.github.io/Furnace/assets/mods/cid/cid.js",
+      "htu": "https://usejxo.github.io/Furnace/assets/mods/cid/htu.text"
     },
     {
       "name": "Diamond Crafting Recipe Mod",
-      "image": "https://jfurnace.netlify.app/assets/icons/dm.png",
+      "image": "https://usejxo.github.io/Furnace/assets/icons/dm.png",
       "description": "Adds a crafting recipe to create diamond blocks from dirt.",
       "category": "Helpfull",
       "author": "ZXMushroom63",
-      "scriptUrl": "https://jfurnace.netlify.app/assets/mods/dbcc/dbcc.js",
-      "htu": "https://jfurnace.netlify.app/assets/mods/dbcc/htu.text"
+      "scriptUrl": "https://usejxo.github.io/Furnace/assets/mods/dbcc/dbcc.js",
+      "htu": "https://usejxo.github.io/Furnace/assets/mods/dbcc/htu.text"
     },
     {
       "name": "Dupe Hunting",
-      "image": "https://jfurnace.netlify.app/assets/icons/dm.png",
+      "image": "https://usejxo.github.io/Furnace/assets/icons/dm.png",
       "description": "⚠️Only works over WS, not local. May induce bans.⚠️",
       "category": "Debug",
       "author": "ZXMushroom63",
-      "scriptUrl": "https://jfurnace.netlify.app/assets/mods/dh/dh.js"
+      "scriptUrl": "https://usejxo.github.io/Furnace/assets/mods/dh/dh.js"
     },
     {
       "name": "Grapplehook",
-      "image": "https://jfurnace.netlify.app/assets/icons/dm.png",
+      "image": "https://usejxo.github.io/Furnace/assets/icons/dm.png",
       "description": "Grappling hook mod.",
       "category": "Fun",
       "author": "ZXMushroom63",
-      "scriptUrl": "https://jfurnace.netlify.app/assets/mods/gh/gh.js",
-      "htu": "https://jfurnace.netlify.app/assets/mods/gh/htu.text"
+      "scriptUrl": "https://usejxo.github.io/Furnace/assets/mods/gh/gh.js",
+      "htu": "https://usejxo.github.io/Furnace/assets/mods/gh/htu.text"
     },
     {
       "name": "Guns",
-      "image": "https://jfurnace.netlify.app/assets/mods/guns/guns.png",
+      "image": "https://usejxo.github.io/Furnace/assets/mods/guns/guns.png",
       "description": "Requires AsyncSink.",
       "category": "Weapon",
       "author": "ZXMushroom63",
-      "scriptUrl": "https://jfurnace.netlify.app/assets/mods/guns/guns.js"
+      "scriptUrl": "https://usejxo.github.io/Furnace/assets/mods/guns/guns.js"
     },
     {
       "name": "Guns craftable",
-      "image": "https://jfurnace.netlify.app/assets/mods/gunsc/gunsc.png",
+      "image": "https://usejxo.github.io/Furnace/assets/mods/gunsc/gunsc.png",
       "description": "Makes guns craftable. Requires AsyncSink. The origanal guns is not needed.",
       "category": "Weapon",
       "author": "ZXMushroom63",
-      "scriptUrl": "https://jfurnace.netlify.app/assets/mods/gunsc/gunsc.js"
+      "scriptUrl": "https://usejxo.github.io/Furnace/assets/mods/gunsc/gunsc.js"
     },
     {
       "name": "SimpleHats",
-      "image": "https://jfurnace.netlify.app/assets/icons/dm.png",
+      "image": "https://usejxo.github.io/Furnace/assets/icons/dm.png",
       "description": "Use /hat to wear whatever you are holding",
       "category": "Fun",
       "author": "Made with ❤️ by ZXMushroom63",
-      "scriptUrl": "https://jfurnace.netlify.app/hats/hats.js"
+      "scriptUrl": "https://usejxo.github.io/Furnace/hats/hats.js"
     },
     {
       "name": "Custom Items Lib",
-      "image": "https://jfurnace.netlify.app/assets/mods/lci/lci.png",
+      "image": "https://usejxo.github.io/Furnace/assets/mods/lci/lci.png",
       "description": "Library to make adding basic custom items easier.",
       "category":"Library",
       "author": "ZXMushroom63",
-      "scriptUrl": "https://jfurnace.netlify.app/assets/mods/lci/lci.js"
+      "scriptUrl": "https://usejxo.github.io/Furnace/assets/mods/lci/lci.js"
     },
     {
       "name": "MobLife viewer",
-      "image": "https://jfurnace.netlify.app/assets/mods/mlv/mlv.png",
+      "image": "https://usejxo.github.io/Furnace/assets/mods/mlv/mlv.png",
       "description": "Mod to see the mobs life in real time.",
       "category":"Util",
       "author": "Oeildelynx",
-      "scriptUrl": "https://jfurnace.netlify.app/assets/mods/mlv/mlv.js"
+      "scriptUrl": "https://usejxo.github.io/Furnace/assets/mods/mlv/mlv.js"
     },
     {
       "name": "Unlucky Blocks",
-      "image": "https://jfurnace.netlify.app/assets/mods/ub/ub.png",
+      "image": "https://usejxo.github.io/Furnace/assets/mods/ub/ub.png",
       "description": "These purple cubes ruined my life. Requires AsyncSink.",
       "category":"Fun",
       "author": "ZXMushroom63",
-      "scriptUrl": "https://jfurnace.netlify.app/assets/mods/ub/ub.js"
+      "scriptUrl": "https://usejxo.github.io/Furnace/assets/mods/ub/ub.js"
     },
     {
       "name": "Simple VClip Exploit",
-      "image": "https://jfurnace.netlify.app/assets/icons/dm.png",
+      "image": "https://usejxo.github.io/Furnace/assets/icons/dm.png",
       "description": "Use .vclip <offset> to vertically phase through blocks.",
       "category":"Exploit",
       "author": "By ZXMushroom63",
-      "scriptUrl": "https://jfurnace.netlify.app/assets/mods/vclip/vclip.js"
+      "scriptUrl": "https://usejxo.github.io/Furnace/assets/mods/vclip/vclip.js"
     },
     {
       "name": "Waypoints Mod",
-      "image": "https://jfurnace.netlify.app/assets/icons/dm.png",
+      "image": "https://usejxo.github.io/Furnace/assets/icons/dm.png",
       "description": "Use /setwp <name> to make a waypoint, and /wp <name> to go to it. /remwp <name> to delete a waypoint. /listwp to list all waypoints.",
       "category":"Usefull",
       "author": "blizz828, Block_2222 & ZXMushroom63",
-      "scriptUrl": "https://jfurnace.netlify.app/assets/mods/wp/wp.js"
+      "scriptUrl": "https://usejxo.github.io/Furnace/assets/mods/wp/wp.js"
     },
     {
       "name": "WorldEdit",
-      "image": "https://jfurnace.netlify.app/assets/mods/we/we.png",
+      "image": "https://usejxo.github.io/Furnace/assets/mods/we/we.png",
       "description": "Use //wand, //set and //walls in singleplayer worlds. Requires Custom Item Lib",
       "category":"Usefull",
       "author": "Radmanplays",
-      "scriptUrl": "https://jfurnace.netlify.app/assets/mods/we/we.js"
+      "scriptUrl": "https://usejxo.github.io/Furnace/assets/mods/we/we.js"
     },
     {
       "name": "XPspawner",
-      "image": "https://jfurnace.netlify.app/assets/icons/dm.png",
+      "image": "https://usejxo.github.io/Furnace/assets/icons/dm.png",
       "description": "Spawns XP",
       "category":"Usefull",
       "author": "ZXMushroom63",
-      "scriptUrl": "https://jfurnace.netlify.app/assets/mods/xps/xps.js"
+      "scriptUrl": "https://usejxo.github.io/Furnace/assets/mods/xps/xps.js"
     }
   ]
 }
